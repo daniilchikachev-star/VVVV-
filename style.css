@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f8fa;
+    color: #222;
+}
+
+header {
+    background: #2563eb;
+    color: #fff;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+#logo {
+    height: 60px;
+    vertical-align: middle;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #c7e0ff;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(50,68,116,0.08);
+    border-radius: 1rem;
+}
+
+.controls {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#location {
+    margin: 1rem 0 2rem 0;
+    font-weight: 500;
+    color: #2563eb;
+}
+
+#news-list {
+    min-height: 200px;
+}
+
+.news-card {
+    border-radius: 0.7rem;
+    background: #f0f4f9;
+    margin: 0.7rem 0;
+    padding: 1rem 1.3rem;
+    box-shadow: 0 2px 6px rgba(50,68,116,0.08);
+    transition: box-shadow .2s;
+}
+.news-card:hover {
+    box-shadow: 0 4px 14px rgba(50,68,116,0.15);
+}
+.news-title {
+    font-size: 1.14rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+.news-meta {
+    color: #7381a0;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+.news-link {
+    color: #2563eb;
+    font-size: 1.01rem;
+    text-decoration: underline;
+}
+
+.loading {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0 .7rem 0;
+    color: #8ba3cf;
+    background: none;
+    font-size: 1.02rem;
+}
