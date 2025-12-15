@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Набережная реки",
+    "description": "Приятная набережная для прогулок, с лавочками и видом на воду.",
+    "latitude": 55.7539,
+    "longitude": 37.6208,
+    "image": "https://images.unsplash.com/photo-1505765056156-0d3f60c089b0?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d6f5c78a5b5f1b0b9a7d1b9a0ec6f39"
+  },
+  {
+    "id": 2,
+    "name": "Городской парк",
+    "description": "Большой зелёный парк с дорожками для прогулок и кофеенкой.",
+    "latitude": 55.7286,
+    "longitude": 37.6010,
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6f3b6f2f9d6a9e8b348d7e9f84b3d6f2"
+  },
+  {
+    "id": 3,
+    "name": "Смотровая площадка",
+    "description": "Высокая точка с отличным панорамным видом на город и закат.",
+    "latitude": 55.7120,
+    "longitude": 37.5365,
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9d3f6b6f3b9b8f4e1c2a3b2f6e4a7c5d"
+  }
+]

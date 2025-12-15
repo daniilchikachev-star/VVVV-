@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Где погулять — поиск по расстоянию (file mode)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Где погулять рядом</h1>
+    <p>Нажмите "Определить местоположение". Если браузер блокирует геолокацию (file:// или http), используйте ручной ввод или определение по IP.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="locateBtn">Определить местоположение</button>
+      <button id="ipBtn">Определить по IP (примерно)</button>
+      <button id="manualToggleBtn">Ввести координаты вручную</button>
+
+      <label for="maxDistance">Макс. расстояние: <span id="maxDistanceValue">—</span></label>
+      <input id="maxDistance" type="range" min="0" max="50" value="50" step="1" />
+    </section>
+
+    <section id="status" class="status">Загрузка мест...</section>
+
+    <section id="manualForm" class="manual-form hidden" aria-hidden="true">
+      <h3>Ввести координаты вручную</h3>
+      <div class="form-row">
+        <label for="latInput">Широта (latitude)</label>
+        <input id="latInput" type="number" step="0.000001" placeholder="55.75" />
+      </div>
+      <div class="form-row">
+        <label for="lonInput">Долгота (longitude)</label>
+        <input id="lonInput" type="number" step="0.000001" placeholder="37.62" />
+      </div>
+      <div class="form-actions">
+        <button id="useCoordsBtn">Использовать эти координаты</button>
+        <button id="sampleBtn" class="muted">Использовать пример (центр города)</button>
+      </div>
+      <p class="hint">Если вы просто открыли файл локально — введите координаты вручную или нажмите пример.</p>
+    </section>
+
+    <section id="places" class="places-grid" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <small>places.json содержит демонстрационные места. При открытии локально браузер может блокировать navigator.geolocation — используйте ручной ввод.</small>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
