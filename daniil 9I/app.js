@@ -17,7 +17,6 @@ const MAX_DIST_VALUE = document.getElementById('maxDistanceValue');
 let userLocation = null;
 let places = [];
 
-// Haversine — расстояние в километрах
 function haversine(lat1, lon1, lat2, lon2) {
   const toRad = deg => deg * Math.PI / 180;
   const R = 6371; // km
@@ -140,8 +139,6 @@ async function locateAndRender() {
   }
 }
 
-// Попытка определить по IP (примерно). Используем ipapi.co как public API.
-// Если нет доступа к сети или CORS, кнопка выдаст ошибку в статусе.
 async function locateByIP() {
   STATUS.textContent = 'Определение по IP…';
   try {
@@ -182,7 +179,6 @@ function useManualCoords() {
 }
 
 function useSampleCoords() {
-  // Пример: центр Москвы (можете заменить на любые координаты)
   const lat = 55.7558;
   const lon = 37.6176;
   userLocation = { latitude: lat, longitude: lon, accuracy: null };
@@ -191,7 +187,6 @@ function useSampleCoords() {
   renderPlaces();
 }
 
-// События
 LOCATE_BTN.addEventListener('click', () => locateAndRender());
 IP_BTN.addEventListener('click', () => locateByIP());
 MANUAL_TOGGLE.addEventListener('click', () => showManualForm(true));
@@ -199,9 +194,9 @@ USE_COORDS_BTN.addEventListener('click', () => useManualCoords());
 SAMPLE_BTN.addEventListener('click', () => useSampleCoords());
 MAX_DIST_INPUT.addEventListener('input', () => renderPlaces());
 
-// Инициализация
 loadPlaces();
 showManualForm(false);
 
 // Совет: при локальном тесте откройте index.html двойным щелчком — если автоматическая геолокация не сработает,
+
 // воспользуйтесь "Ввести координаты вручную" или "Определить по IP".
